@@ -34,7 +34,7 @@ public class b2_bj1152 {
         //문자열 str의 첫 문자가 공백인 경우와, 아닌 경우를 나눠볼까? -> 놓친 조건이 있었음. 문자열로 공백만 넣는 경우임
 
         /*3가지 경우로 나눔.*/
-        if(str.charAt(0)==' ' && str.length()==1){ /*공백 한개를 넣는 경우 -> 0만 출력하면 됌.*/
+        if(str.charAt(0)==' ' && str.length()==1){ /*입력값으로 공백 한개를 넣는 경우 -> 0만 출력하면 됌.*/
             System.out.println(0);
         }else if(str.charAt(0)==' '){/*문자열의 첫 문자가 공백인 경우*/
             System.out.println(arr.length-1);
