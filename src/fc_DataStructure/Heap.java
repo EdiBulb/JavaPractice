@@ -1,4 +1,4 @@
-package DataStructure;
+package fc_DataStructure;
 
 import java.util.ArrayList;
 import  java.util.Collections;
@@ -41,9 +41,9 @@ public class Heap {
             this.heapArray.add(data);
             return true;//삽입 완료
         }
-        //그렇지 않다면
+        //그렇지 않다면 - 배열이 null이 아니라면,
         this.heapArray.add(data);
-        inserted_idx = this.heapArray.size() - 1;
+        inserted_idx = this.heapArray.size() - 1; //넣은 데이터 값의 인덱스를 구하고
 
         while (this.move_up(inserted_idx)) {//swap 실행
             parent_idx = inserted_idx / 2;
@@ -52,6 +52,7 @@ public class Heap {
         }
         return true;//삽입 완료
     }
+
     /*method - 노드를 delete할 때 '끌어 올려와진 노드'와 'child 노드'를 비교해서 swap을 해야하는지 판단한다.*/
     public boolean move_down(Integer popped_idx) {
         Integer left_child_popped_idx, right_child_popped_idx;
@@ -65,17 +66,17 @@ public class Heap {
             // CASE2: 오른쪽 자식 노드만 없을 때(즉, 왼쪽 노드 있을 때)
         } else if (right_child_popped_idx >= this.heapArray.size()) {
             if (this.heapArray.get(popped_idx) < this.heapArray.get(left_child_popped_idx)) {
-                return true;
+                return true; // swap 해야함
             } else {
-                return false;
+                return false; // swap 불가능
             }
             // CASE3: 왼쪽, 오른쪽 자식 노드 모두 있을 때
         } else {
-            if (this.heapArray.get(left_child_popped_idx) > this.heapArray.get(right_child_popped_idx)) {
-                if (this.heapArray.get(popped_idx) < this.heapArray.get(left_child_popped_idx)) {
-                    return true;
+            if (this.heapArray.get(left_child_popped_idx) > this.heapArray.get(right_child_popped_idx)) {//왼쪽과 오른쪽 중 큰 값을 찾는다.
+                if (this.heapArray.get(popped_idx) < this.heapArray.get(left_child_popped_idx)) {//현재값과 그 중 큰 값을 비교해서
+                    return true;//자식 노드가 크다면 swap
                 } else {
-                    return false;
+                    return false; //자식 노드가 작다면  swap 불가능
                 }
             } else {
                 if (this.heapArray.get(popped_idx) < this.heapArray.get(right_child_popped_idx)) {
@@ -87,23 +88,25 @@ public class Heap {
         }
     }
 
+    /*노드를 삭제하는 메소드*/
     public Integer pop() {
         Integer returned_data, popped_idx, left_child_popped_idx, right_child_popped_idx;
 
+        //case1 : 노드가 없으면
         if (this.heapArray.size() <= 1) {
-            return null;
+            return null; //삭제 x
         }
 
-        returned_data = this.heapArray.get(1);
-        this.heapArray.set(1, this.heapArray.get(this.heapArray.size() - 1));
-        this.heapArray.remove(this.heapArray.size() - 1);
-        popped_idx = 1;//이제 시작!!
+        returned_data = this.heapArray.get(1); // 루트 노드를 뺴서 보관한다.
+        this.heapArray.set(1, this.heapArray.get(this.heapArray.size() - 1)); // 최하단의 데이터값을 루트 노드의 값과 바꾼다.
+        this.heapArray.remove(this.heapArray.size() - 1);//최하단 데이터 값 삭제한다.
+        popped_idx = 1;//이제 삭제 시작!!
 
-        while (this.move_down(popped_idx)) {
+        while (this.move_down(popped_idx)) {//swap을 해야하는지 판단한다.
             left_child_popped_idx = popped_idx * 2;
             right_child_popped_idx = popped_idx * 2 + 1;
 
-            /*왼쪽 노드밖에 없다면*/
+            /* case2 : 왼쪽 노드밖에 없다면*/
             if (right_child_popped_idx >= this.heapArray.size()) {
                 if (this.heapArray.get(popped_idx) < this.heapArray.get(left_child_popped_idx)) {
                     Collections.swap(this.heapArray, popped_idx, left_child_popped_idx);
@@ -111,7 +114,7 @@ public class Heap {
                 }
                 //왼쪽이 더 큰게 아니면 안바꿈 - 코드 굳이 안적음
 
-            } else {/*노드가 두개가 있다면*/
+            } else {/* case3 : 노드가 두개가 있다면*/
                 if (this.heapArray.get(left_child_popped_idx) > this.heapArray.get(right_child_popped_idx)) {
                     if (this.heapArray.get(popped_idx) < this.heapArray.get(left_child_popped_idx)) {
                         Collections.swap(this.heapArray, popped_idx, left_child_popped_idx);
@@ -125,6 +128,7 @@ public class Heap {
                 }
             }
         }
+        //heap정렬을 완료하고 저장했던 루트 데이터를 리턴한다.
         return returned_data;
     }
 

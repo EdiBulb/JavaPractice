@@ -44,20 +44,20 @@ public class s2_bj2075 {
 
         //4. N번째 큰수를 출력한다. -> N-1번 poll()을 해주면 마지막에 N번째 큰 수를 출력할 수 있다.
 
-        for(int i = 0; i<N-1;i++){
-//            myque.remove(1);
-            //우선순위큐에서 remove()를 할때는 안에 파라미터를 넣지 않는다.
-            //넣으면 다른 값이 온다.
-//            myque.remove();
-            System.out.println(myque.poll());
-            /*여기서 질문
-            * sout(myque) 를 했을 때는 내림차순으로 정렬되어 출력이 되지 않는데,
-            * 왜 poll()로 출력을 해보면 내림차순 출력이 되는 것일까?*/
-        }
-        System.out.println(myque.poll());
+//        for(int i = 0; i<N-1;i++){
+////            myque.remove(1);
+//            //우선순위큐에서 remove()를 할때는 안에 파라미터를 넣지 않는다.
+//            //넣으면 다른 값이 온다.
+////            myque.remove();
+//            System.out.println(myque.poll());
+//            /*여기서 질문
+//            * sout(myque) 를 했을 때는 내림차순으로 정렬되어 출력이 되지 않는데,
+//            * 왜 poll()로 출력을 해보면 내림차순 출력이 되는 것일까?*/
+//        }
+//        System.out.println(myque.poll());
 
-//        //test용
-//        System.out.println(myque); //왜 우선순위 큐의 정렬이 안되지?
+        //test용
+        System.out.println(myque); //왜 우선순위 큐의 정렬이 안되지?
 
 
     }
