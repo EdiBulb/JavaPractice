@@ -27,8 +27,9 @@ public class b1_bj23968 {
     /*1. 버블 정렬 구현한다.*/
     //직접 구현 연습하기
 
-    static int count =0;
-    static int num1,num2 =0;
+
+    static int count =0; //교환 횟수를 세는 변수
+
     public static void boubleSort(int[]arr,int k){
         for(int i =0;i<arr.length;i++){
             for(int j=0;j<arr.length-i-1;j++){
