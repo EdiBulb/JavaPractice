@@ -102,7 +102,5 @@ public class g5_bj23970 {
         if(flag==true){
             System.out.println(1);
         }else System.out.println(0);
-
-
     }
 }
