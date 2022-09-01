@@ -35,7 +35,7 @@ public class s3_bj9461 {
             int N = Integer.parseInt(br.readLine());
 
             for(int j=4;j<dp.length;j++){
-                dp[j]=-1;
+
             }
             System.out.println(triangle(N));
 
