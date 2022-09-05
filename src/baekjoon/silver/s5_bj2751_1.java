@@ -19,7 +19,7 @@ public class s5_bj2751_1 {
         ArrayList<Integer>list = new ArrayList<>();
 
         for(int i=0;i<N;i++){
-            list.add(Integer.parseInt(br.readLine()));
+//            list.add(Integer.parseInt(br.readLine()));
         }
         Collections.sort(list);
 
