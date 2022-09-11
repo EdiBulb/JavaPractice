@@ -23,10 +23,14 @@ public class b5_bj15740 {
 //        System.out.println((char)a+(char)b); //공부할 것 : char로 정수 계산하는 방법알기 - 계속 아스키코드로 바뀌어서...
 
 
-        byte a = Byte.parseByte(st.nextToken());
-        byte b = Byte.parseByte(st.nextToken());
-        System.out.println();
+//
+//        byte a = Byte.parseByte(st.nextToken());
+//        byte b = Byte.parseByte(st.nextToken());
+//        System.out.println();
 
+        long a = Long.parseLong(st.nextToken());
+        long b = Long.parseLong(st.nextToken());
+        System.out.println(a+b);
 //
 //        BigInteger a = new BigInteger(st.nextToken());
 //        BigInteger b = new BigInteger(st.nextToken());
