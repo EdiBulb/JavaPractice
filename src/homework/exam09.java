@@ -7,5 +7,7 @@ public class exam09 {
         auto.upSpeed(250);
         System.out.println("승용차의 속도는 "
             + auto.getSpeed() + "km입니다.");
+
+        System.out.println("b684002 byeonghun");
     }
 }

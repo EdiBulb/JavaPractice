@@ -12,24 +12,26 @@ public class exam12 {
         iTiger tiger = new iTiger();
         tiger.move();
         tiger.eat();
+        System.out.println("b684002 byeonghun");
     }
 
     static class iCat implements iAnimal{
 
         @Override
         public void eat() {
-            System.out.println("생선을 좋아한다.");
+            System.out.println("like fish");
         }
     }
 
     static class iTiger extends Animal implements iAnimal{
         void move(){
-            System.out.println("네 발로 이동한다.");
+            System.out.println("move with 4 legs");
         }
 
         @Override
         public void eat() {
-            System.out.println("멧돼지를 잡아먹는다.");
+            System.out.println("eat wild pig");
         }
+
     }
 }

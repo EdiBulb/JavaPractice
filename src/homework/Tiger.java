@@ -5,6 +5,6 @@ public class Tiger extends Animal{
 
     @Override
     void move() {
-        System.out.println("네발로 이동한다.");
+        System.out.println("move with 4 legs");
     }
 }

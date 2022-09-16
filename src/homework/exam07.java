@@ -2,15 +2,15 @@ package homework;
 
 public class exam07 {
     public static void main(String[] args) {
-        Car myCar1 = new Car("빨강",0);
+        Car myCar1 = new Car("red",0);
 //        myCar1.color = "빨강";
 //        myCar1.speed = 0;
 
-        Car myCar2 = new Car("파랑",0);
+        Car myCar2 = new Car("blue",0);
 //        myCar2.color = "파랑";
 //        myCar2.speed = 0;
 
-        Car myCar3 = new Car("초록",0);
+        Car myCar3 = new Car("green",0);
 //        myCar3.color = "초록";
 //        myCar3.speed = 0;
 

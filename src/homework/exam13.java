@@ -12,5 +12,7 @@ public class exam13 {
                 System.out.println("클릭 리스너입니다.");
             }
         });
+
+        System.out.println("b684002 byeonghun");
     }
 }

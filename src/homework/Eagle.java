@@ -6,6 +6,6 @@ public class Eagle extends Animal{
 
     @Override
     void move() {
-        System.out.println("날개로 이동한다.");
+        System.out.println("move with wings.");
     }
 }

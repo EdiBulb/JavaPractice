@@ -47,7 +47,4 @@ public class Car {
     String getColor(){
         return color;
     }
-
-
-
 }
