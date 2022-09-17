@@ -17,15 +17,15 @@ public class exam03 {
         String str1 = "Asd"; // = new String("Asd"); //str1 = 0xAA;
         String str2 = "dgg"; // = new String("dgg"); //str2 = 0xAb;
 
-        if(str1==str2) { ... } //xxx
-        if(str1.equals(str2)) { ... }
+//        if(str1==str2) { ... } //xxx
+//        if(str1.equals(str2)) { ... }
 
 
-        int[] arr = new int[5];
-        arr.leng
-
-        String[] att = new String[5];
-        att.length
+//        int[] arr = new int[5];
+//        arr.leng
+//
+//        String[] att = new String[5];
+//        att.length
 
         int jumsu = (count/10)*10;
         switch (jumsu){
