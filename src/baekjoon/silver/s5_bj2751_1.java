@@ -16,11 +16,13 @@ public class s5_bj2751_1 {
 
         int N = Integer.parseInt(br.readLine());
 
+        //리스트로 정렬한다.
         ArrayList<Integer>list = new ArrayList<>();
 
         for(int i=0;i<N;i++){
-//            list.add(Integer.parseInt(br.readLine()));
+            list.add(Integer.parseInt(br.readLine()));
         }
+
         Collections.sort(list);
 
         for(int value : list){
