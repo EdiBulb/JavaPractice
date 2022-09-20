@@ -26,5 +26,8 @@ public class b5_bj11718 {
             s = br.readLine();
         }
         System.out.println(sb);
+
+        //왜 안나왔는지 이유 파악하기
+
     }
 }
