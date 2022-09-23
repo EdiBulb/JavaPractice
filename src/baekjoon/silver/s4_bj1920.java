@@ -43,9 +43,9 @@ public class s4_bj1920 {
         StringTokenizer st = new StringTokenizer(bf.readLine());
 
         //배열 값 넣기
-        for(int i=0;i<N;i++){
-            arr.add(Integer.valueOf(st.nextToken()));
-        }
+//        for(int i=0;i<N;i++){
+//            arr.add(Integer.valueOf(st.nextToken()));
+//        }
 
         //이진 탐색 조건 - 오른차순 정렬상태
         Collections.sort(arr);
