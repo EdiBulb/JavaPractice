@@ -29,6 +29,8 @@ import java.util.StringTokenizer;
 //시도 4 : 메모리 초과 이유 찾기 -> 재귀함수가 유력하다. N의 값이 꽤 컸는데, 재귀가 가능한 N의 범위와 아닌 범위를 구분하는 능력을 키워보자
 //시도 4-1 : 재귀를 사용하지 않고 이진탐색을 써보자 -> s4_bj1920_1.java
 
+//문제 5 : 다른 풀이로 해결했음 -> 그렇다면 이 풀이가 왜 메모리초과가 났을까?
+//해결책 5 : 다른 점 찾아보기 -> 반복문을 사용하지 않고 재귀를 이용했다.
 
 
 public class s4_bj1920 {
@@ -43,9 +45,9 @@ public class s4_bj1920 {
         StringTokenizer st = new StringTokenizer(bf.readLine());
 
         //배열 값 넣기
-//        for(int i=0;i<N;i++){
-//            arr.add(Integer.valueOf(st.nextToken()));
-//        }
+        for(int i=0;i<N;i++){
+            arr.add(Integer.valueOf(st.nextToken()));
+        }
 
         //이진 탐색 조건 - 오른차순 정렬상태
         Collections.sort(arr);
@@ -56,7 +58,10 @@ public class s4_bj1920 {
         //M개의 수를 가진 줄 공백자르기
         StringTokenizer st2 = new StringTokenizer(bf.readLine());
 
+        //출력 모으기
         StringBuilder sb = new StringBuilder();
+
+        //이진 탐색
         for(int i=0;i<M;i++){
             //메소드로 각각의 입력값이 존재하는지 확인하기
             sb.append(binarySearch(arr, Integer.valueOf(st2.nextToken()))).append("\n");

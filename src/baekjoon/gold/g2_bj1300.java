@@ -28,14 +28,14 @@ public class g2_bj1300 {
         //N*N 2차원 배열 A 만들기
         Integer[][] A = new Integer[N][N];
 
-        /*//인덱스 1부터 시작
+        //인덱스 1부터 시작
         A[0][0] = null;
         A[0][1] = null;
-        A[1][0] = null;*/
+        A[1][0] = null;
 
         //배열 A값 넣기
-        for(int i=0;i<N;i++){
-            for(int j=0;j<N;j++){
+        for(int i=1;i<N+1;i++){
+            for(int j=1;j<N+1;j++){
                 A[i][j] = i*j;
             }
         }
@@ -46,16 +46,16 @@ public class g2_bj1300 {
         //배열 A의 값을 배열 B에 넣기
 //        문제 1 : 2차원 배열의 값을 1차원 배열에 넣고 싶은데, 어떻게 넣어야할지 모르겠다.
 //        시도 1-1 : 검색해보기
+//        해결책 1 : 2중 for문으로 넣기
 
-        /*for(int i=1;i<=N*N;i++){
-            B[i] = A[i][j];
-        }*/
         //test
         for(int i=0;i<A.length;i++){
-            for(int j=0;j<A[i].length;j++){
-                B[A[i].length * i + j] = A[i][j];
+            for(int j=1;j<A[i].length+1;j++){
+                B[A[i].length * i + j] = A[i+1][j];
             }
         }
+//        문제 3 : 인덱스가 1부터 시작하는 2차원 배열을 인덱스가 1부터 시작하는 1차원 배열로 바꾸는 것
+//        시도 3 : 블로그 참조
 
         //문제 1 이 해결돼었다면
         //배열 B를 오름차순 정렬하기
