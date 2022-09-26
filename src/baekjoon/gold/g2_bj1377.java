@@ -33,6 +33,8 @@ public class g2_bj1377 {
 
         int N = Integer.parseInt(br.readLine());
 
+//        int[] arr2 ;
+//        arr2 = new int[N];
         int[]arr = new int[N];
 
         for(int i=0;i<arr.length;i++){
