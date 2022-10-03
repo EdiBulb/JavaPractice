@@ -36,19 +36,19 @@ public class s2_bj1260 {
         //빈 그래프 만들기
         HashMap<Integer, ArrayList<Integer>> graph = new HashMap<>();
 
-//      문제 1 : 미리 해시를 만들어 놓고 add하는 방향으로 가보는 건 어떨까?
-        //미리 선언해 놓기
-        for(int i=1;i<=N;i++){
-            graph.put(i,null);
-        }
+
+        //시도 2 : 해시 맵에 데이터를 넣을 때, 배열 생성이 중복되어서 값 갱신이 안됨 따라서 switch 문으로 case에 해당하면 배열에 값을 넣어 놓자
+
 
         //간선의 개수만큼 반복한다.
         for(int i=0;i<M;i++){
             String s2 = bf.readLine();
             StringTokenizer st2 = new StringTokenizer(s2);
 
-            //시도 1 : 키 값에 접근해서 그 키값의 배열에 접근하는 방법
-            graph.put(Integer.valueOf(st2.nextToken()),new ArrayList<>(Integer.parseInt(st2.nextToken())));
+            //문제 1 : 해시맵에 데이터를 넣을 때, arrayList에 데이터를 넣는 방법이 막힘
+            //해결책 1 : 다른 방법 찾아보기기
+//           graph.put(st2.nextToken(),graph.values().add(st2.nextToken()))
+
         }
         System.out.println(graph);
     }
