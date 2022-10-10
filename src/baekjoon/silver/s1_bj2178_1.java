@@ -3,7 +3,14 @@ package baekjoon.silver;
 /*제목 : 미로 탐색*/
 
 /*블로그 풀이 연구*/
-
+/*접근법 :
+* 1. N*M 미로를 2차원 배열로 연결상태를 만든다.
+* 2. 각 좌표에서 1,1과의 거리를 저장하는 2차원 배열을 만들고 -1로 초기화 시킨다.
+* 3. 현재 좌표의 위치를 저장하는 type을 가지는 queue를 만든다.
+* 4. 현재 좌표에서 이동 가능한 다음좌표를 구한다.
+* 5. 이동한 다음 좌표를 큐에 넣어주고 이동한 거리를 +1해준다.
+* 6. 마지막 좌표를 위치로 갖는 거리 배열의 값을 출력한다.
+*/
 
 import java.util.*;
 import java.io.*;
@@ -20,9 +27,12 @@ public class s1_bj2178_1 {
 
         char[][] miro = new char[N][M];  // 미로를 저장할 배열
         int[][] dist = new int[N][M];    // 거리를 계산할 dist 배열
+
+
         int[] dx = {1, 0 , -1, 0};       // 상하좌우 계산할 x좌표
         int[] dy = {0, 1, 0, -1};        // 상하좌우 계산할 y좌표
-        Queue<Pair> qu = new LinkedList<>(); // Pair 타입인 갈 수 있는 다음 좌표를 넣는 큐
+
+        Queue<Pair> qu = new LinkedList<>(); // Pair 타입인 현재 좌표를 넣는 큐
 
         //miro 배열에 값 저장하기 및 거리 배열 초기화 시키기
         for(int i=0; i<N; i++){

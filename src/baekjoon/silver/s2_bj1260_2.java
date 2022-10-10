@@ -74,7 +74,7 @@ public class s2_bj1260_2 {
 
         //반복해서 방문 확인
         for(int i = 1 ; i <= node ; i++) {
-            //i인덱스의 값이 1이고 방문이 안됐으면 재귀로 방문하기
+            //i인덱스의 값이 1이고(노드 간 연결이 되어있고) 방문이 안됐으면 재귀로 방문하기
             if(arr[start][i] == 1 && !check[i])
                 dfs(i);
         }
@@ -99,7 +99,7 @@ public class s2_bj1260_2 {
                 if(arr[start][i] == 1 && !check[i]) {
                     //큐에 넣어주기
                     q.add(i);
-                    //
+                    //방문처리하기
                     check[i] = true;
                 }
             }
