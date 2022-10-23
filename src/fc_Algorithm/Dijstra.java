@@ -7,9 +7,8 @@ import java.util.PriorityQueue;
 
 class Edge implements Comparable<Edge>{
 
-    //거리와 노드 이름
-    public int distance;
-    public String vertex;
+    public int distance;//거리
+    public String vertex;//노드
 
     public Edge(int distance, String vertex){
         this.distance = distance;
@@ -29,51 +28,57 @@ class Edge implements Comparable<Edge>{
 }
 
 public class Dijstra {
+    //메소드 - 노드와 최단거리를 리턴, 그래프에 대한 정보와 시작노드를 파라미터로 받는다.
     public HashMap<String,Integer> dijkstraFunc(HashMap<String,ArrayList<Edge>>graph, String start){
         Edge edgeNode, adjacentNode;
         ArrayList<Edge> nodeList;
         int currentDistance, weight, distance;
         String currentNode, adjacent;
 
-        //해시 맵 생성
+        //최단거리를 저장하는 배열을 해시맵으로 생성
         HashMap<String,Integer>distances = new HashMap<>();
+
         //초기화 - 키값에 최대값 넣기
         for(String key : graph.keySet()){
-            distances.put(key, Integer.MAX_VALUE);
+            distances.put(key, Integer.MAX_VALUE);//최대값을 넣는다.
         }
         //시작값 업데이트
         distances.put(start, 0);
 
-        //
+        //우선순위 큐 만들기
         PriorityQueue<Edge> priorityQueue = new PriorityQueue<>();
+        //시작 노드 넣기
         priorityQueue.add(new Edge(distances.get(start), start));//시작 인자 거리, 노드 이름
 
         //알고리즘 작성
-        while (priorityQueue.size()>0){//검토할 노드가 없을 때까지 반복
-            edgeNode = priorityQueue.poll();
-            currentDistance = edgeNode.distance;
-            currentNode = edgeNode.vertex;
+        while (priorityQueue.size()>0){//우선순위 큐에 검토할 노드가 없을 때까지 반복
+            edgeNode = priorityQueue.poll(); // 우선순위 큐에서 데이터를 가져온다.
+            currentDistance = edgeNode.distance; //노드의 거리
+            currentNode = edgeNode.vertex; // 노드의 이름
 
-            //currentNode의 값보다 크다면 할 일이 없으니 다음으로 넘어간다.
+           //currentNode의 최단거리 값보다 크다면 할 일이 없으니 다음으로 넘어간다.
             if(distances.get(currentNode)<currentDistance){
                 continue;
             }
 
-            //리스트를 가져온다.
+            //노드에 연결된 노드 리스트를 가져온다.
             nodeList = graph.get(currentNode);
+
+            //순회를 한다.
             for(int index = 0; index<nodeList.size();index++){
-                adjacentNode = nodeList.get(index);
-                adjacent = adjacentNode.vertex;
+                adjacentNode = nodeList.get(index);//edge
+                adjacent = adjacentNode.vertex;//
                 weight = adjacentNode.distance;
                 distance = currentDistance + weight;
 
+                //최단 거리 정보를 업데이트 한다.
                 if (distance< distances.get(adjacent)){
                     distances.put(adjacent, distance);
                     priorityQueue.add(new Edge(distance, adjacent));
                 }
             }
         }
-        //최종결과 리턴
+        //최소값을 가진 값들을 리턴한다.
         return  distances;
     }
     public static void main(String[] args) {
