@@ -1,6 +1,6 @@
-package study;
+package self_study;
 
-public class sp_Tree {
+public class Tree {
     /*가장 먼저 노드를 만든다. */
     public class Node {
         Node left;
@@ -251,7 +251,7 @@ public class sp_Tree {
     }
 
     public static void main(String[] args) {
-        sp_Tree myTree = new sp_Tree();
+        Tree myTree = new Tree();
         myTree.insertNode(10);
         myTree.insertNode(15);
         myTree.insertNode(13);

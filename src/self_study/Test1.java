@@ -1,4 +1,4 @@
-package study;
+package self_study;
 
 public class Test1 {
     public String pubValue;

@@ -1,4 +1,4 @@
-package study;
+package self_study;
 
 /*주제 : 접근제한자
 *
@@ -11,7 +11,7 @@ package study;
 * protected : 같은 패키지 또는 자식 클래스에서 사용할 수 있도록 한다.
 * private : 외부에서 사용할 수 없도록 한다.
 * default : 같은 패키지에 소속된 클래스에서만 사용가능하게 한다.*/
-public class sp_AccessModifier {
+public class AccessModifier {
 
 
     /*필드와 메소드의 접근 제한*/
@@ -28,7 +28,7 @@ public class sp_AccessModifier {
 
 
     public static void main(String[] args) {
-        sp_MyClass myClass = new sp_MyClass();
+        MyClass myClass = new MyClass();
 //        myClass.a="a";
         myClass.setA("a");
 

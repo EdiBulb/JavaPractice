@@ -1,10 +1,10 @@
-package study;
+package self_study;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class sp_MethodMakePractice {
+public class MethodMakePractice {
     public static void boubleSort(int[] arr){
         for(int i = 0;i<arr.length;i++){
             for(int j=0;j<arr.length-i-1;j++){

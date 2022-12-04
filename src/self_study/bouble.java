@@ -1,4 +1,4 @@
-package study;
+package self_study;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -39,7 +39,7 @@ class BubbleSort{
 
 
 
-public class sp_bouble {
+public class bouble {
     /*버블정렬 메소드를 만들어보자*/
 
     public static void main(String[] args) {

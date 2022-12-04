@@ -1,8 +1,8 @@
-package study;
+package self_study;
 
 import java.util.PriorityQueue;
 
-public class sp_priorityqueue {
+public class priorityqueue {
     public static void main(String[] args) {
         PriorityQueue<Integer> myque = new PriorityQueue();
 

@@ -1,6 +1,6 @@
-package study;
+package self_study;
 
-public class sp_MyClass {
+public class MyClass {
     private String a;
     private String b;
 

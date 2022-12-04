@@ -1,8 +1,8 @@
-package study;
+package self_study;
 
 
 
-public class sp_Debug {
+public class Debug {
 
     public static void main(String[] args) {
         System.out.println("Start");

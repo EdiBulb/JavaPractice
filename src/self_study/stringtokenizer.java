@@ -1,11 +1,11 @@
-package study;
+package self_study;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class sp_stringtokenizer {
+public class stringtokenizer {
     public static void main(String[] args) throws IOException {
         /*버퍼의 특징*/
         //버퍼를 사용하는 입력은, 키보드의 입력이 있을 때마다 한 문자씩 버퍼로 전송한다.

@@ -1,4 +1,4 @@
-package study;
+package self_study;
 
 /*재귀 호출 공부*/
 
@@ -7,7 +7,7 @@ package study;
 *
 * */
 
-public class sp_RecursiveCall {
+public class RecursiveCall {
     //재귀 예제 1 - StackOverFlow 발생
     static void printHelloInfinite(){
         System.out.println("hello");

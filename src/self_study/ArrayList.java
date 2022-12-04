@@ -1,10 +1,8 @@
-package study;
+package self_study;
 
-import java.util.ArrayList;
-
-public class sp_ArrayList {
+public class ArrayList {
     public static void main(String[] args) {
-        ArrayList al = new ArrayList();
+        java.util.ArrayList al = new java.util.ArrayList();
 
         al.add(1);
         al.add(2);

@@ -1,4 +1,4 @@
-package study;
+package self_study;
 class TimerThread extends Thread{
     int n =0;
     @Override

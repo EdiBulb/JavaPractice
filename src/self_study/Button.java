@@ -1,4 +1,4 @@
-package study;
+package self_study;
 
 public class Button {
     //인터페이스 타입 필드

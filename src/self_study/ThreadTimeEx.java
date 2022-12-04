@@ -1,4 +1,4 @@
-package study;
+package self_study;
 
 import javax.swing.*;
 import java.awt.*;

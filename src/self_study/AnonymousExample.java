@@ -1,4 +1,4 @@
-package study;
+package self_study;
 
 public class AnonymousExample {
     public static void main(String[] args) {
