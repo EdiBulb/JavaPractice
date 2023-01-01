@@ -1,6 +1,5 @@
 package baekjoon.gold;
 
-/*이 방법은 시간초과가 난다. 왜냐? 불필요한 탐색을 많이하기 때문이다.*/
 
 import java.io.*;
 import java.util.StringTokenizer;
@@ -24,20 +23,6 @@ public class g4_9663_3 {
         if(r1-c1 == r2 - c2) return true; //왼쪽 대각선인 경우
         if(r1+c1 == r2 + c2) return true; //오른쪽 대각선인 경우
         return false;
-    }
-
-    //모든 퀸이 서로를 공격할 수 없는지 확인하는 함수, 공격이 없다면 true, 공격이 있다면 false
-    static boolean validity_check(){
-        for(int i=1; i<=N;i++){
-            //(i, col[i])
-            for(int j=1; j<i; j++){
-                //(j, col[j])
-                if(attackable(i, col[i], j, col[j])){
-                    return false;
-                }
-            }
-        }
-        return true;
     }
 
     //row번 ~N 번 행에 대해서 가능한 퀸을 놓는 경우의 수를 구하는 함수

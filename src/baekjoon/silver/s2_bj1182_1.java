@@ -31,6 +31,7 @@ public class s2_bj1182_1 {
             System.out.println(count);
         }
     }
+
     private static void dfs(int depth, int sum){ // depth: 위치를 나타낸다. sum: 부분수열의 합
         if(depth==N){ // 마지막 위치인 경우,
             if(sum == S){ // 더한 값과 같을 경우,
@@ -38,7 +39,9 @@ public class s2_bj1182_1 {
             }
             return;
         }
-        dfs(depth+1, sum+num[depth]); // 지금 위치의 원소를 선택한다.
-        dfs(depth+1, sum); // 선택하지 않는다.
+
+        //마지막 위치가 아니라면,
+        dfs(depth+1, sum+num[depth]); // 지금 위치의 원소를 선택하고 다음으로 넘어가기
+        dfs(depth+1, sum); // 선택하지 않고 다음으로 넘어가기.
     }
 }

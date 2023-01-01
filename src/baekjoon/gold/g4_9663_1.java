@@ -24,14 +24,14 @@ public class g4_9663_1 {
         //위치
         queen = new int[N];
 
-        //깊이 0에서 dfs 시작
+        //깊이 0에서(0번쨰 행에서) dfs 시작
         dfs(0);
 
         System.out.println(cnt);
     }
 
     static void dfs(int depth){
-        //깊이와 N이 같을 경우, 찾음
+        //깊이와 N이 같을 경우, 적절한 위치를 찾음
         if(depth == N){
             cnt++;
             return;
@@ -49,9 +49,9 @@ public class g4_9663_1 {
     }
     static boolean canPut(int depth){
         for(int i=0;i<depth;i++){
-            if(queen[depth] == queen[i])
+            if(queen[depth] == queen[i]) // 같은 행에 있는 경우
                 return false;
-            else if(Math.abs(depth-i)== Math.abs(queen[depth] - queen[i]))
+            else if(Math.abs(depth-i)== Math.abs(queen[depth] - queen[i])) // 대각선에 있는 경우
                 return false;
         }
         return true;
