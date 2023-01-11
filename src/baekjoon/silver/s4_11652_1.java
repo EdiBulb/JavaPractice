@@ -8,6 +8,8 @@ import java.util.HashMap;
 public class s4_11652_1 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        //카드 N장
         int N = Integer.parseInt(br.readLine());
 
         //카드 숫자, 카드 개수 해시맵

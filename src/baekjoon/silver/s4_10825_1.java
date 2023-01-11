@@ -28,6 +28,7 @@ public class s4_10825_1 {
             );
         }
 
+        //Comparator 기준 재정의
         Comparator<Student> myComparator = new Comparator<Student>() {
             @Override
             public int compare(Student o1, Student o2) {
@@ -53,19 +54,19 @@ public class s4_10825_1 {
                         }
                     }
                 }
-                return -1; // -1이 의미하는게 뭔지?
+                return -1; //
             }
         };
 
-        //재정렬
+        //재정렬 시키기
         Arrays.sort(students, myComparator);
         
-        //출력
+        //이름 출력
         for(int i=0;i<n;i++){
             bw.write(students[i].name + "\n");
         }
         
-        //모름
+        //
         bw.flush();
         bw.close();
     }
