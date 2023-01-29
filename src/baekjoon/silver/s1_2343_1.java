@@ -22,7 +22,7 @@ public class s1_2343_1 {
         for(int i=0;i<N;i++){
             Lesson[i] = sc.nextInt();
             if(start<Lesson[i]) start = Lesson[i];
-            end = end + Lesson[i];
+            end = end + Lesson[i]; // 가장 긴 시간을 구한다.
         }
 
         while (start <= end){
