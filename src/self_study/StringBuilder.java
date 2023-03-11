@@ -30,4 +30,7 @@ public class StringBuilder {
         myque1.add(5);
         System.out.println(myque1);
     }
+
+    public void append(String s) {
+    }
 }
